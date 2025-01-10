@@ -1,4 +1,7 @@
-export const formatNumber = (number: any, decimalDigits: number = 4) => {
+export const formatNumber = (
+  number: number | bigint,
+  decimalDigits: number = 4
+) => {
   return new Intl.NumberFormat("en-US", {
     minimumFractionDigits: decimalDigits,
   }).format(number);
